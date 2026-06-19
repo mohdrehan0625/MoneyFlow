@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-function BudgetCard() {
+function BudgetCard({ showToast })  {
   const [budget, setBudget] = useState(
     localStorage.getItem("monthlyBudget") || ""
   );
 
   const saveBudget = () => {
-    localStorage.setItem("monthlyBudget", budget);
+  localStorage.setItem("monthlyBudget", budget);
 
-    alert("Monthly budget saved successfully!");
-  };
+  showToast("✅ Budget saved successfully");
+};
 
   return (
     <div className="card">

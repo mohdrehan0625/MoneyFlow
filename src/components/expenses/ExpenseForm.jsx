@@ -2,8 +2,10 @@ import { useState, useContext } from "react";
 import { ExpenseContext } from "../../context/ExpenseContext";
 import "../../styles/expense-form.css";
 
-function ExpenseForm() {
+function ExpenseForm({ showToast })  {
   const { addExpense } = useContext(ExpenseContext);
+
+  const [error, setError] = useState("");
 
   const [formData, setFormData] = useState({
     date: new Date().toISOString().split("T")[0],
@@ -15,23 +17,34 @@ function ExpenseForm() {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
     setFormData({
       ...formData,
       [name]: type === "checkbox" ? checked : value,
     });
+
+    setError("");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.amount || !formData.category || !formData.description) {
-      alert("Please fill all fields");
+
+    if (
+      !formData.amount ||
+      !formData.category ||
+      !formData.description
+    ) {
+      setError("Please fill all required fields.");
       return;
     }
+
     addExpense({
       id: String(Date.now()),
       ...formData,
       amount: Number(formData.amount),
     });
+    showToast("✅ Expense added successfully");
+
     setFormData({
       date: new Date().toISOString().split("T")[0],
       amount: "",
@@ -39,10 +52,15 @@ function ExpenseForm() {
       description: "",
       recurring: false,
     });
+
+    setError("");
   };
 
   return (
-    <form className="expense-form" onSubmit={handleSubmit}>
+    <form
+      className="expense-form"
+      onSubmit={handleSubmit}
+    >
       <h2>Add Expense</h2>
 
       <input
@@ -65,7 +83,10 @@ function ExpenseForm() {
         value={formData.category}
         onChange={handleChange}
       >
-        <option value="">Select Category</option>
+        <option value="">
+          Select Category
+        </option>
+
         <option>Food</option>
         <option>Travel</option>
         <option>Shopping</option>
@@ -94,9 +115,25 @@ function ExpenseForm() {
         Recurring Expense
       </label>
 
-      <button type="submit" className="submit-btn">
+      <button
+        type="submit"
+        className="submit-btn"
+      >
         Add Expense
       </button>
+
+      {error && (
+        <p
+          style={{
+            color: "#ef4444",
+            fontSize: "14px",
+            marginTop: "10px",
+            fontWeight: "500",
+          }}
+        >
+          {error}
+        </p>
+      )}
     </form>
   );
 }

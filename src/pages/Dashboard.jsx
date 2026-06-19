@@ -3,7 +3,7 @@ import ExpenseList from "../components/expenses/ExpenseList";
 import BudgetCard from "../components/budget/BudgetCard";
 import Summary from "./Summary";
 
-function Dashboard({ activeTab }) {
+function Dashboard({ activeTab, showToast }) {
   if (activeTab === "summary") {
     return <Summary />;
   }
@@ -12,10 +12,10 @@ function Dashboard({ activeTab }) {
     <div className="container">
       {activeTab === "add" && (
         <>
-          <BudgetCard />
+          <BudgetCard showToast={showToast} />
 
           <div className="card">
-            <ExpenseForm />
+            <ExpenseForm showToast={showToast} />
           </div>
         </>
       )}
@@ -26,7 +26,7 @@ function Dashboard({ activeTab }) {
             All Expenses
           </h2>
 
-          <ExpenseList />
+          <ExpenseList showToast={showToast} />
         </div>
       )}
     </div>
