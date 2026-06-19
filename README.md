@@ -63,19 +63,19 @@ https://money-flow-five-beige.vercel.app
 
 ### Add Expense Page (Light Mode)
 
-![Add Expense](screenshots/add-expense-light.png)
+![Add Expense](screenshots/add-expense-light.PNG)
 
 ### All Expenses Page (Light Mode)
 
-![All Expenses](screenshots/all-expenses-light.png)
+![All Expenses](screenshots/all-expenses-light.PNG)
 
 ### Insights Dashboard (Light Mode)
 
-![Insights](screenshots/insights-light.png)
+![Insights](screenshots/insights-light.PNG)
 
 ### Add Expense Page (Dark Mode)
 
-![Dark Mode](screenshots/add-expense-dark.png)
+![Dark Mode](screenshots/add-expense-dark.PNG)
 
 ---
 
