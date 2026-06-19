@@ -1,10 +1,18 @@
 # 💸 Money Flow
 
-A modern expense tracking web application built with React and Vite that helps users manage expenses, monitor budgets, and understand spending habits.
+Money Flow is a modern expense tracking web application built with React and Vite.
+
+Track expenses, monitor budgets, and understand spending habits through powerful analytics, visual charts, and an intuitive user interface.
 
 ---
 
-## 🚀 Features
+## 🌐 Live Demo
+
+https://money-flow-five-beige.vercel.app
+
+---
+
+## ✨ Features
 
 ### Expense Management
 - Add expenses
@@ -15,15 +23,16 @@ A modern expense tracking web application built with React and Vite that helps u
 
 ### Budget Management
 - Set monthly budget
-- Budget persistence using Local Storage
-- Budget overview with spending analysis
+- Budget overview
+- Spending analysis
+- Remaining budget calculation
+- Budget usage percentage
 
 ### Analytics & Insights
 - Total amount spent
 - Total expenses count
-- Category count
+- Total categories count
 - Financial Health Score
-- Budget usage percentage
 - Spending insights dashboard
 
 ### Charts & Visualization
@@ -45,23 +54,28 @@ A modern expense tracking web application built with React and Vite that helps u
 - Responsive design
 - Dark Mode support
 - Local Storage persistence
-- Clean dashboard layout
+- Toast notifications
+- Mobile-friendly layout
 
 ---
 
 ## 📸 Screenshots
 
-### Add Expense Page
+### Add Expense Page (Light Mode)
 
-_Add screenshot here_
+![Add Expense](screenshots/add-expense-light.png)
 
-### Expenses Page
+### All Expenses Page (Light Mode)
 
-_Add screenshot here_
+![All Expenses](screenshots/all-expenses-light.png)
 
-### Insights Dashboard
+### Insights Dashboard (Light Mode)
 
-_Add screenshot here_
+![Insights](screenshots/insights-light.png)
+
+### Add Expense Page (Dark Mode)
+
+![Dark Mode](screenshots/add-expense-dark.png)
 
 ---
 
@@ -79,13 +93,16 @@ _Add screenshot here_
 ### Styling
 - CSS3
 - CSS Variables
-- Responsive Layout
+- Responsive Design
 
 ### Data Visualization
 - Recharts
 
 ### Storage
 - Browser Local Storage
+
+### Deployment
+- Vercel
 
 ---
 
@@ -119,7 +136,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MoneyFlow.git
+git clone https://github.com/mohdrehn0625/MoneyFlow.git
 ```
 
 Move into the project:
@@ -150,45 +167,53 @@ http://localhost:5173
 
 ## 🎯 Application Sections
 
-### Add Expense
+### ➕ Add Expense
 - Monthly Budget
+- Budget Saving
 - Expense Form
-
-### Expenses
-- Search
-- Filter
-- Sort
-- Export CSV
-- Expense List
-
-### Insights
-- Statistics Cards
 - Financial Health Score
+
+### 📋 All Expenses
+- Search Expenses
+- Filter by Category
+- Sort Expenses
+- Export CSV
+- Edit Expenses
+- Delete Expenses
+
+### 📊 Insights
+- Statistics Cards
 - Budget Overview
-- Pie Chart
-- Bar Chart
+- Financial Health Score
+- Pie Chart Analysis
+- Bar Chart Analysis
 
 ---
 
 ## 🔮 Future Improvements
 
-- User Authentication
-- Cloud Database Integration
-- Recurring Expense Automation
-- Monthly Reports
-- Notifications
-- Mobile Application
+- Custom delete confirmation modal
+- User authentication
+- Cloud synchronization
+- Monthly financial reports
+- Expense import/export
 
 ---
 
 ## 👨‍💻 Author
 
-Mohammed Rehan
+**Mohammed Rehan**
 
-Built using React and Vite.
+GitHub: https://github.com/mohdrehn0625
+
+Repository: https://github.com/mohdrehn0625/MoneyFlow
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.
